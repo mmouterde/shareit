@@ -181,6 +181,13 @@ module.exports = function (grunt) {
                   //remove the first part of the path (app/)
                   return src.substring(4);
                 }
+              },
+              'css': {
+                src: 'app/**/*.css',
+                rename: function (dest, src) {
+                  //remove the first part of the path (app/)
+                  return src.substring(4);
+                }
               }
             }
           }

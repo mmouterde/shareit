@@ -8,5 +8,10 @@ angular.module('app')
         url: "/",
         templateUrl: "home/home.html"
       })
+      .state('question', {
+        url: "/question",
+        templateUrl: "question/question.html"
+      });
+
       $urlRouterProvider.otherwise("/");
   });

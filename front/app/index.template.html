@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>zInka</title>
+  <title>ShareIt</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
@@ -13,14 +13,59 @@
   <!-- endbuild -->
 
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- fileblock:css css -->
+  <!-- endfileblock -->
   <!-- endbuild -->
 
 </head>
 <body ng-app="app">
+<vbox>
+  <header>
+    <hbox align-items="center" justify-content="space-between" gap="0">
+      <span class="headerTitle">ShareIT</span>
+      <button type="button" class="headerMenuButton btn btn-link">
+        <span class="glyphicon glyphicon-align-justify"></span>
+      </button>
+      <glue></glue>
+      <div class="quickSearch">
+        <form class="navbar-form" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
 
-<div ui-view></div>
-
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <notification-icon icon-class="fa fa-envelope" number-class="label-success" number="3"></notification-icon>
+      <notification-icon icon-class="fa fa-warning" number-class="label-warning" number="19"></notification-icon>
+      <dropdown icon-class="glyphicon glyphicon-user" text="Martin Mouterde"></dropdown>
+    </hbox>
+  </header>
+  <hbox auto-height>
+  <nav role='navigation' class="menu-column">
+    <vbox justify-content="space-between">
+      toto
+      <glue></glue>
+      titi
+    </vbox>
+  </nav>
+  <vbox>
+    <hbox class="pageHeader">
+      <div class="pageTitle"></div>
+      <div class="pageSubTitle"></div>
+      <div class="hGlue"></div>
+      <div class="pageBreadCumb"></div>
+    </hbox>
+    <div ui-view></div>
+  </vbox>
+  </hbox>
+  <footer>
+    <hbox>
+    </hbox>
+  </footer>
+</vbox>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <!-- endbower -->

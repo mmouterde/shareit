@@ -18,54 +18,40 @@
   <!-- endbuild -->
 
 </head>
-<body ng-app="app">
-<vbox>
-  <header>
-    <hbox align-items="center" justify-content="space-between" gap="0">
-      <span class="headerTitle">ShareIT</span>
-      <button type="button" class="headerMenuButton btn btn-link">
-        <span class="glyphicon glyphicon-align-justify"></span>
-      </button>
-      <glue></glue>
-      <div class="quickSearch">
-        <form class="navbar-form" role="search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+<body ng-app="app" vbox>
+<header hbox>
+  <span class="headerTitle">ShareIT</span>
+  <glue></glue>
+  <div class="quickSearch hidden-xs">
+    <form class="navbar-form" role="search">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
 
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-          </div>
-        </form>
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
       </div>
-      <notification-icon icon-class="fa fa-envelope" number-class="label-success" number="3"></notification-icon>
-      <notification-icon icon-class="fa fa-warning" number-class="label-warning" number="19"></notification-icon>
-      <dropdown icon-class="glyphicon glyphicon-user" text="Martin Mouterde"></dropdown>
-    </hbox>
-  </header>
-  <hbox auto-height>
-  <nav role='navigation' class="menu-column">
-    <vbox justify-content="space-between">
-      toto
-      <glue></glue>
-      titi
-    </vbox>
-  </nav>
-  <vbox>
-    <hbox class="pageHeader">
-      <div class="pageTitle"></div>
-      <div class="pageSubTitle"></div>
-      <div class="hGlue"></div>
-      <div class="pageBreadCumb"></div>
-    </hbox>
-    <div ui-view></div>
-  </vbox>
+    </form>
+  </div>
+
+  <notification-icon icon-class="fa fa-bell" class="visible-sm visible-xs" number-class="label-info" number="24"
+                     title=""></notification-icon>
+  <notification-icon icon-class="fa fa-comment-o" class="hidden-sm hidden-xs" number-class="label-danger" number="19"
+                     title="Nouvelle question"></notification-icon>
+  <notification-icon icon-class="fa fa-comments" class="hidden-sm hidden-xs" number-class="label-warning" number="3"
+                     title="Nouvelle réponse"></notification-icon>
+  <notification-icon icon-class="fa fa-envelope" class="hidden-sm hidden-xs" number-class="label-info" number="2"
+                     title="Nouvel échange"></notification-icon>
+  <dropdown icon-class="glyphicon glyphicon-user" text="Martin Mouterde"></dropdown>
+</header>
+<hbox>
+  <ng-include src="'./menu/menu.html'" auto-height></ng-include>
+  <main ui-view></main>
+</hbox>
+<footer>
+  <hbox>
   </hbox>
-  <footer>
-    <hbox>
-    </hbox>
-  </footer>
-</vbox>
+</footer>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <!-- endbower -->
@@ -75,6 +61,5 @@
 <!-- fileblock:js app -->
 <!-- endfileblock -->
 <!-- endbuild -->
-
 </body>
 </html>

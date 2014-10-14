@@ -1,0 +1,23 @@
+<div class="box box-success right-answer">
+  <i class="icon fa fa-check"></i>
+  <vbox>
+    <hbox>
+      <vbox class="notation">
+        <i class="glyphicon glyphicon-chevron-up" ng-if="isVoteEnable"></i>
+        <i class="questionNotation">{{message.notation}}</i>
+        <i class="glyphicon glyphicon-chevron-down glyphicon-chevron-down-align" ng-if="isVoteEnable"></i>
+      </vbox>
+      <vbox grow="1">
+        <div class="box-body" ng-bind-html="message.content.data">
+        </div>
+        <hbox>
+          <glue></glue>
+          <span class="author">Submitted by <a
+            href="">{{message.author.displayName}}</a> on {{message.date | date}}</span>
+        </hbox>
+        <div ng-if="message.comments.length>0" class="comment-box">
+          <comment class="comment" comment="comment" ng-repeat="comment in message.comments"></comment>
+        </div>
+      </vbox>
+  </vbox>
+</div>

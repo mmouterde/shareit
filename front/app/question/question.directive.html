@@ -1,0 +1,27 @@
+<div class="box box-danger question ">
+  <i class="icon fa fa-question"></i>
+  <vbox>
+    <hbox>
+      <vbox class="notation">
+        <i class="glyphicon glyphicon-chevron-up" ng-if="isVoteEnable()"></i>
+        <i class="questionNotation">{{message.notation}}</i>
+        <i class="glyphicon glyphicon-chevron-down glyphicon-chevron-down-align" ng-if="isVoteEnable()"></i>
+        <solid size="10px"></solid>
+        <i class="fa fa-star favorite" ng-if="isFavorite()"></i>
+        <i class="fa fa-star-o favorite" ng-if="!isFavorite()"></i>
+      </vbox>
+      <vbox grow="1">
+        <div class="box-body" ng-bind-html="message.content.data">
+        </div>
+        <hbox>
+          <glue></glue>
+          <span class="author">Submitted by <a
+            href="">{{message.author.displayName}}</a> on {{message.date | date}}</span>
+        </hbox>
+        <div ng-if="message.comments.length>0" class="comment-box">
+          <comment class="comment" comment="comment" ng-repeat="comment in message.comments"></comment>
+        </div>
+      </vbox>
+    </hbox>
+  </vbox>
+</div>

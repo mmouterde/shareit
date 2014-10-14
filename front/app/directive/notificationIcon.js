@@ -8,7 +8,7 @@ angular.module("app").directive("notificationIcon", function(){
       numberClass:"@",
       number:"="
     },
-    template:'<span class="dropdown notificationIcon">' +
+    template:'<span class="dropdown notificationIcon ">' +
       ' <a href class="dropdown-toggle">' +
       '  <span class="{{iconClass}}"></span>' +
       '  <span class="notificationLabel label {{numberClass}}" ng-if="number">{{number}}</span>' +

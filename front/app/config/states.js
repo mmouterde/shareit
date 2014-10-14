@@ -9,8 +9,13 @@ angular.module('app')
         templateUrl: "home/home.html"
       })
       .state('question', {
-        url: "/question",
-        templateUrl: "question/question.html"
+        url: "/question/:threadID",
+        templateUrl: "question/question.html",
+        controller:"QuestionController",
+        data : {
+          page_subtitle :"Ask and Answer",
+          page_title : "Q&A"
+        }
       });
 
       $urlRouterProvider.otherwise("/");

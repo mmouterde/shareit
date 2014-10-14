@@ -193,6 +193,13 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+
+    watch: {
+      index: {
+        files: ['app/index.template.html'],
+        tasks: ['dev']
+      }
     }
   });
 

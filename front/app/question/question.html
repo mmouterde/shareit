@@ -1,3 +1,28 @@
-<panel title="How to round the result of a computation to n decimal places in Java">
-  Ici lkjklj
-</panel>
+
+<vbox>
+  <section class="content-header" hbox vbox-xs>
+      <h1 order-xs="2">
+       {{page_title}}
+        <small>{{page_subtitle}}</small>
+      </h1>
+  </section>
+
+  <hbox justify="flex-start" >
+    <vbox class="content">
+
+      <h4 class="page-header">
+        {{thread.title}}
+        <small>{{thread.subtitle}}</small>
+      </h4>
+
+      <question message="question"/>
+
+      <h4 class="page-header">
+        {{answers.length}} Answers
+      </h4>
+
+      <answer message="message" ng-repeat="message in answers"></answer>
+
+    </vbox>
+  </hbox>
+</vbox>
